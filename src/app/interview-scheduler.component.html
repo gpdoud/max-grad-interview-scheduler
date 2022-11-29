@@ -1,0 +1,55 @@
+<content>
+    <header>
+        <div>
+            <h3>MAX Interview Scheduler</h3>
+        </div>
+    </header>
+    <main>
+        <div class="left">
+            <form>
+                <table class="table table-sm table-borderless">
+                    <tbody>
+                        <tr>
+                            <th>Student names (separate by comma):</th>
+                        </tr>
+                        <tr>
+                            <td><input [(ngModel)]="studentStr" name="studentStr" size="35"></td>
+                        </tr>
+                        <tr>
+                            <th>Start time:</th>
+                        </tr>
+                        <tr>
+                            <td><input [(ngModel)]="startTime" name="startTime" type="time"></td>
+                        </tr>
+                        <tr>
+                            <th>Interview mins:</th>
+                        </tr>
+                        <tr>
+                            <td><input [(ngModel)]="minutes" class="width107" name="minutes" type="number"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button (click)="generate()" class="btn btn-primary">Generate</button>
+            </form>
+        </div>
+        <div class="right">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Student-A</th>
+                        <th>Student-A</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let s of sessions">
+                        <td>{{ s.time }}</td>
+                        <td>{{ s.studentA }}</td>
+                        <td>{{ s.studentB }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer></footer>
+</content>
