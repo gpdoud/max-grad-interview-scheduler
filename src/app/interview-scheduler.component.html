@@ -13,16 +13,25 @@
                             <th>Student names (separate by comma):</th>
                         </tr>
                         <tr>
-                            <td><input [(ngModel)]="studentStr" name="studentStr" size="35"></td>
+                            <td><input [(ngModel)]="studentStr" name="studentStr" size="45"></td>
                         </tr>
                         <tr>
-                            <th>Start time:</th>
+                            <th>Room names:</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input [(ngModel)]="roomA" name="roomA" size="15"> | 
+                                <input [(ngModel)]="roomB" name="roomB" size="15">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Interview start time:</th>
                         </tr>
                         <tr>
                             <td><input [(ngModel)]="startTime" name="startTime" type="time"></td>
                         </tr>
                         <tr>
-                            <th>Interview mins:</th>
+                            <th>Total Interview mins:</th>
                         </tr>
                         <tr>
                             <td><input [(ngModel)]="minutes" class="width107" name="minutes" type="number"></td>
@@ -37,8 +46,8 @@
                 <thead>
                     <tr>
                         <th>Time</th>
-                        <th>Student-A</th>
-                        <th>Student-A</th>
+                        <th>{{ roomA }}</th>
+                        <th>{{ roomB }}</th>
                     </tr>
                 </thead>
                 <tbody>

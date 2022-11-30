@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
 export class InterviewSchedulerComponent implements OnInit {
 
   studentStr!: string;
-  startTime!: string;
+  startTime: string = "15:00";
   startHours: number = 0;
   startMinutes: number = 0;
   minutes: number = 60;
@@ -24,6 +24,8 @@ export class InterviewSchedulerComponent implements OnInit {
   studentsB: string[] = [];
   sessionTimes: string[] = [];
   sessions!: any[];
+  roomA: string = "Classroom A";
+  roomB: string = "Media room";
 
   constructor() { }
 
